@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     flag: {
         fontSize: 28,
         color: '#FFFFFF',
-        marginBottom: 54
+        marginBottom: 4
     },
     country: {
         fontSize: 14,
