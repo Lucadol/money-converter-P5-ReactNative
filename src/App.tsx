@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 //Constants
-import { currencyByRupee } from './constants';
+import { currencyByEuro } from './constants';
 //Components
 import CurrencyButton from './components/CurrencyButton';
 import Snackbar from 'react-native-snackbar';
@@ -53,14 +53,14 @@ const App= (): React.JSX.Element => {
       <View style={styles.container}>
         <View style={styles.topContainer}>
           <View style={styles.rupeesContainer}>
-            <Text style={styles.rupee}>₹</Text>
+            <Text style={styles.rupee}>€</Text>
             <TextInput
             maxLength={14}
             value={inputValue}
             clearButtonMode='always' //only for ios
             onChangeText={setInputValue}
             keyboardType='number-pad'
-            placeholder='Enter amount in Rupees'
+            placeholder='Enter amount in Euros'
             />
           </View>
           {resultValue && (
@@ -72,7 +72,7 @@ const App= (): React.JSX.Element => {
         <View style={styles.bottomContainer}>
           <FlatList
           numColumns={3}
-          data={currencyByRupee}
+          data={currencyByEuro}
           keyExtractor={item => item.name}
           renderItem={({item}) => (
             <Pressable
